@@ -1,0 +1,36 @@
+_repo: The-Jungle_140
+creator:
+  author:
+    agent_name: Sinclair, Upton
+    aliases:
+    - Fitch, Clarke
+    - Sinclair, Upton Beall
+    - Garrison, Frederick
+    birthdate: 1878
+    deathdate: 1968
+    gutenberg_agent_id: '88'
+    url: http://www.gutenberg.org/2009/agents/88
+    wikipedia: http://en.wikipedia.org/wiki/Upton_Sinclair
+gutenberg_bookshelf:
+- Bestsellers, American, 1895-1923
+- Banned Books from Anne Haight's list
+- Contemporary Reviews
+gutenberg_issued: '2006-03-11'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '140'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- '!lcsh:Chicago (Ill.) -- Fiction'
+- '!lcsh:Meat industry and trade -- Fiction'
+- '!lcsh:Political fiction'
+- '!lcsh:Stockyards -- Fiction'
+- '!lcc:PS'
+- '!lcsh:Working class -- Fiction'
+- '!lcsh:Immigrants -- Fiction'
+- '!lcsh:Lithuanian Americans -- Fiction'
+title: The Jungle
+url: http://www.gutenberg.org/ebooks/140
