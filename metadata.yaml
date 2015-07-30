@@ -3,8 +3,8 @@ creator:
   author:
     agent_name: Sinclair, Upton
     aliases:
-    - Fitch, Clarke
     - Sinclair, Upton Beall
+    - Fitch, Clarke
     - Garrison, Frederick
     birthdate: 1878
     deathdate: 1968
@@ -24,13 +24,13 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Chicago (Ill.) -- Fiction'
-- '!lcsh:Meat industry and trade -- Fiction'
-- '!lcsh:Political fiction'
-- '!lcsh:Stockyards -- Fiction'
-- '!lcc:PS'
 - '!lcsh:Working class -- Fiction'
-- '!lcsh:Immigrants -- Fiction'
+- '!lcsh:Chicago (Ill.) -- Fiction'
 - '!lcsh:Lithuanian Americans -- Fiction'
+- '!lcsh:Stockyards -- Fiction'
+- '!lcsh:Meat industry and trade -- Fiction'
+- '!lcc:PS'
+- '!lcsh:Political fiction'
+- '!lcsh:Immigrants -- Fiction'
 title: The Jungle
 url: http://www.gutenberg.org/ebooks/140
