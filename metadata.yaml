@@ -1,5 +1,5 @@
 _repo: The-Jungle_140
-_version: 0.0.2
+_version: 0.1.0
 covers:
 - attribution: Wade Greenberg, 2015
   cover_type: original
@@ -40,5 +40,6 @@ subjects:
 - '!lcsh: Political fiction'
 - '!lcsh: Immigrants -- Fiction'
 - '!lcsh: Meat industry and trade -- Fiction'
+- GITenberg
 title: The Jungle
 url: http://www.gutenberg.org/ebooks/140
