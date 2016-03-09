@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub The-Jungle.epub
+- ebook-convert The-Jungle.epub The-Jungle.mobi
+- xvfb-run ebook-convert The-Jungle.epub The-Jungle.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: uuI/o8RU1oUnPUi51RgjwGJFZ8ObWqP7WYA0PWqZWovR9aiLih6WXinIWT3lrzK28gjGPKFzF7O3ZPT7RPqUyTWqIR9WbKOiMnaKS8pKZQ2rUM2odJZFJSVzgu6eWYQyfhj4z1MwjD2ih6wLMPoiQMK8ilY/3M2FAiO+dVuxuy8UgCgzO/NV5JgYbsJdPJlPWQK/w5t/exwZ8/ktTOCJvLT3o2Wpw0aDAinRVwxCt3/hI7DvDDvxNU6ubSD0yVYxC4wnd5ZLDvpgAVOnzb4x5k1asmjmE4YY8QBfWM+GbEKSx5/aMhDqAmmc0ois6RwaAn4C5a+XR71hiahWbsO7npqRGfmvpyz3Cy3Smeh3Kcz0VV7w7GE0OEcs/n31UI0cE8pEq4SHbsTAhrEOkv9JwhtmHbxa6Jn8RQdUnu29jkNA6jpZcjTapZuPWU2RD1TJDtWpZTVkX8McrTDKKsIWRX3MAzOem2m1BD5WoN9u7gbE1O2WTVZCM/lpyzFC9uoIUJ9RVenZbN+69GrlA7JbDwIbaTrVZuu9XVZdAt4WuAQ2ntNIjDZ6vn1EL/1Z7bk4t0DSdd5ECNqgy0eUNMY4/mEWDtj0AO6ghwj107wRZJWyfeJ3Sk+qF8AmdKuzZgs/zrujtocCnCWo6Qm9MVnYtDGvjBNklOrNDV82f2pfAMg=
-  file: The-Jungle.epub
+  file:
+    - The-Jungle.epub
+    - The-Jungle.mobi
+    - The-Jungle.pdf
   "on":
     repo: GITenberg/The-Jungle_140
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
